@@ -1,8 +1,12 @@
 package MongoDB;
 
+import Spring.RSAFile;
 import Spring.User;
 import com.mongodb.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -54,5 +58,29 @@ public class DatabaseAdapter {
             return new User(userArray.get("_id"), userArray.get("username"));
         }
         return null;
+    }
+
+    public static ArrayList<RSAFile> getFiles() {
+        if (dbConnectionIsOpen) {
+            DBCollection collection = database.getCollection("rsafiles");
+            DBCursor rsaFiles = collection.find();
+            ArrayList<RSAFile> files = new ArrayList<RSAFile>();
+            while(rsaFiles.hasNext()) {
+                Map<String, Object> filesArray = rsaFiles.next().toMap();
+                files.add(new RSAFile(filesArray.get("_id").toString(),
+                        filesArray.get("filename").toString(),
+                        filesArray.get("filebody").toString(),
+                        getUsername(filesArray.get("owner").toString()),
+                        filesArray.get("checkflag").toString()));
+            }
+            return files;
+        }
+        return null;
+    }
+
+    static String getUsername(String userId) {
+        DBCollection collection = database.getCollection("rsausers");
+        DBCursor userCursor = collection.find(new BasicDBObject().append("_id", userId));
+        return userCursor.next().get("username").toString();
     }
 }

@@ -23,7 +23,7 @@ class LoginController: NSViewController {
     
     @IBAction func okButtonTapped(_ sender: Any) {
         repeat {
-            guard let url = URL(string: "http://192.168.0.101:8080/login") else {break}
+            guard let url = URL(string: "http://192.168.0.100:8080/login") else {break}
             let parameters = ["username": usernameTextField.stringValue]
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
@@ -47,6 +47,8 @@ class LoginController: NSViewController {
                     username = user.username
                     isLogged = true
                     print(username)
+                    AppUser.instance.username = username
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "reloadData"), object: nil)
                 } catch {
                     print(error)
                 }

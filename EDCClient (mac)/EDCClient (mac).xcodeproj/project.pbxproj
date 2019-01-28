@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40B330C21FCFAFE0075CB0A /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B330B21FCFAFE0075CB0A /* AppUser.swift */; };
 		E4CF198D21F490D7009CEB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF198C21F490D7009CEB16 /* AppDelegate.swift */; };
 		E4CF198F21F490D7009CEB16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CF198E21F490D7009CEB16 /* ViewController.swift */; };
 		E4CF199121F490D8009CEB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CF199021F490D8009CEB16 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E40B330B21FCFAFE0075CB0A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		E4CF198921F490D7009CEB16 /* EDCClient (mac).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDCClient (mac).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CF198C21F490D7009CEB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4CF198E21F490D7009CEB16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E40B330A21FCFAF10075CB0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E40B330B21FCFAFE0075CB0A /* AppUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E4CF198021F490D7009CEB16 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 		E4CF198B21F490D7009CEB16 /* EDCClient (mac) */ = {
 			isa = PBXGroup;
 			children = (
+				E40B330A21FCFAF10075CB0A /* Model */,
 				E4CF198C21F490D7009CEB16 /* AppDelegate.swift */,
 				E4CF198E21F490D7009CEB16 /* ViewController.swift */,
 				E4CF199C21F491FF009CEB16 /* LoginController.swift */,
@@ -136,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40B330C21FCFAFE0075CB0A /* AppUser.swift in Sources */,
 				E4CF198F21F490D7009CEB16 /* ViewController.swift in Sources */,
 				E4CF199D21F491FF009CEB16 /* LoginController.swift in Sources */,
 				E4CF198D21F490D7009CEB16 /* AppDelegate.swift in Sources */,
