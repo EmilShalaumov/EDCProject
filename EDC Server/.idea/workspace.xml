@@ -4,7 +4,6 @@
     <list default="true" id="ea102eca-6d6c-42ac-b499-61b7cfbc025e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../EDCClient (mac)/EDCClient (mac).xcodeproj/project.xcworkspace/xcuserdata/emilsalaumov.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../EDCClient (mac)/EDCClient (mac).xcodeproj/project.xcworkspace/xcuserdata/emilsalaumov.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../EDCClient (mac)/EDCClient (mac).xcodeproj/xcuserdata/emilsalaumov.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/../EDCClient (mac)/EDCClient (mac).xcodeproj/xcuserdata/emilsalaumov.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EDCClient (mac)/EDCClient (mac)/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../EDCClient (mac)/EDCClient (mac)/ViewController.swift" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -121,8 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,6 +165,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,17 +231,18 @@
       <workItem from="1548701988997" duration="836000" />
       <workItem from="1549191499987" duration="261000" />
       <workItem from="1549192912433" duration="313000" />
+      <workItem from="1549195313001" duration="476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9488000" />
+    <option name="totallyTimeSpent" value="9964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27181688" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27539343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />

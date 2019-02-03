@@ -1,0 +1,16 @@
+#dummy files creation
+db.rsafiles.insert({"filename": "Solara file.txt",
+                    "filebody": "Description of toyota solara and maybe something about wagon",
+                    "owner": "910df491-de32-4276-9fbd-ef17f70f562a",
+                    "checkflag": "1"})
+
+db.rsafiles.insert({"filename": "Dummyfile.txt",
+                    "filebody": "Dummy file is full of text",
+                    "owner": "e099d511-11dd-481e-a1bb-5755bbde54a7",
+                    "checkflag": "0"})
+
+db.rsafiles.insert({"filename": "testencryption.txt",
+                    "filebody": "Some body for text file!!!",
+                    "owner": "928bb2f0-7b3b-4e4e-94a3-521f9f0c3515",
+                    "checkflag": "1"})
+
