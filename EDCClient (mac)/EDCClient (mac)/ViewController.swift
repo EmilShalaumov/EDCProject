@@ -17,6 +17,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
     var idx: Int = 2
+    var FileArray: [FileCell] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class ViewController: NSViewController {
     }
     
     func getFilesList() {
+        FileArray = []
         guard let url = URL(string: "http://localhost:8080/getfiles") else { return }
         
         let session = URLSession.shared
@@ -58,6 +60,13 @@ class ViewController: NSViewController {
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
+                
+                //experiment
+                let decoder = JSONDecoder()
+                do {
+                    self.FileArray = try decoder.decode([FileCell].self, from: data)
+                    print(self.FileArray)
+                }
             } catch {
                 print(error)
             }
@@ -70,12 +79,6 @@ class ViewController: NSViewController {
         }
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
     @IBAction func buttonTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "showLoginView", sender: self)
     }
@@ -84,26 +87,39 @@ class ViewController: NSViewController {
 
 extension ViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return idx
+        return FileArray.count
     }
 }
 
 extension ViewController: NSTableViewDelegate {
     
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         var cellIdentifier: String = ""
+        var cellText: String = ""
         if tableColumn == tableView.tableColumns[0] {
             cellIdentifier = "FileNameCell"
+            cellText = FileArray[row].filename
         } else if tableColumn == tableView.tableColumns[1] {
             cellIdentifier = "OwnerCell"
+            cellText = FileArray[row].owner
         } else {
             cellIdentifier = "StatusCell"
+            cellText = FileArray[row].checkflag
         }
+        
+        print(cellIdentifier)
+        print(cellText)
 
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier), owner: nil) as? NSTableCellView {
-            cell.textField?.stringValue = "Hello"
+            cell.textField?.stringValue = cellText
             return cell
         }
         return nil
     }
+}
+
+struct FileCell: Codable {
+    let filename: String
+    let owner: String
+    let checkflag: String
 }
