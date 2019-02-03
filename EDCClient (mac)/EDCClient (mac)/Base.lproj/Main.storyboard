@@ -748,7 +748,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="225.5" minWidth="40" maxWidth="1000" id="8RB-Gp-mcb">
+                                                <tableColumn identifier="FileNameCell" width="225.5" minWidth="40" maxWidth="1000" id="8RB-Gp-mcb">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="FileName">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -782,7 +782,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="105.5" minWidth="40" maxWidth="1000" id="jJZ-Ck-ftg">
+                                                <tableColumn identifier="OwnerCell" width="105.5" minWidth="40" maxWidth="1000" id="jJZ-Ck-ftg">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Owner">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -796,7 +796,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="EBU-cS-g8U">
-                                                            <rect key="frame" x="230" y="1" width="105" height="17"/>
+                                                            <rect key="frame" x="229.5" y="1" width="105" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Dl-ih-ED7">
@@ -815,7 +815,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="106" minWidth="10" maxWidth="3.4028234663852886e+38" id="9EV-E3-6xQ">
+                                                <tableColumn identifier="StatusCell" width="106" minWidth="10" maxWidth="3.4028234663852886e+38" id="9EV-E3-6xQ">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Status">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -884,6 +884,8 @@
                     <connections>
                         <outlet property="helloLabel" destination="rco-jV-kQo" id="GI6-JV-t2D"/>
                         <outlet property="scrollView" destination="Ood-Gc-E6B" id="hB6-5o-9YX"/>
+                        <outlet property="tableView" destination="heD-Tw-hKm" id="Yvg-Va-hsZ"/>
+                        <outlet property="tableview" destination="heD-Tw-hKm" id="eT9-AV-mDC"/>
                         <segue destination="752-8P-LLT" kind="sheet" identifier="showLoginView" id="Apx-iD-OFl"/>
                     </connections>
                 </viewController>

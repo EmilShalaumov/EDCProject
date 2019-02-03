@@ -23,7 +23,7 @@ class LoginController: NSViewController {
     
     @IBAction func okButtonTapped(_ sender: Any) {
         repeat {
-            guard let url = URL(string: "http://192.168.0.100:8080/login") else {break}
+            guard let url = URL(string: "http://localhost:8080/login") else {break}
             let parameters = ["username": usernameTextField.stringValue]
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
